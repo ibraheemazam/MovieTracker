@@ -1,7 +1,7 @@
-.App {
+/* .App {
   text-align: center;
-}
-
+} */
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +35,33 @@
   to {
     transform: rotate(360deg);
   }
+} */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Smooch&display=swap');
+
+:root {
+  --bg: #EEEDE7;
+  --highlight: #E7D2CC;
+  --lowlight: #B9B7BD;
+  --dark: #868B8E;;
+}
+
+
+* {
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+button {
+  background-color: var(--lowlight);
+  border-radius: 5px;
+  border: none;
+  border-width: thin;
+}
+
+input {
+  border-radius: 5px;
+  border-width: thin;
 }

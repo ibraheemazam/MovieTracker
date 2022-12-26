@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import movies from './movieData'
+import AddBar from './Components/AddBar';
+import SearchBar from './Components/MovieList/SearchBar';
+import Title from './Components/Title';
+import Movie from './Components/Movie';
 
-function App() {
+export default function App() {
+  console.log(movies)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title>Movie Tracker</Title>
+      <AddBar />
+      <SearchBar />
+      <Movie />
     </div>
   );
 }
 
-export default App;
+/*
+
+Title component
+
+*/
