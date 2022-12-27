@@ -1,8 +1,10 @@
 export default function AddBar () {
   return (
-    <div>
-      <input></input>
-      <button>Add Movie</button>
+    <div className="container">
+      <div className="addBar">
+        <input></input>
+        <button>Add Movie</button>
+      </div>
     </div>
   )
 }

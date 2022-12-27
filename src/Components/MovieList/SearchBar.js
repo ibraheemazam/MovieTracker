@@ -1,5 +1,8 @@
 export default function SearchBar () {
   return (
-    <div>search</div>
+    <div>
+      <input></input>
+      <button>Search</button>
+    </div>
   )
 }

@@ -3,9 +3,11 @@
 export default function Title ({ children }) {
 
   return (
-    <h1 id="title">
-      {children}
-    </h1>
+    <header className="container">
+      <h1 id="title">
+        {children}
+      </h1>
+    </header>
   )
 }
 
