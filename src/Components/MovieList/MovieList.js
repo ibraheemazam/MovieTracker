@@ -4,8 +4,12 @@ import SearchBar from './SearchBar';
 
 export default function MovieList({ movies, setMovies }) {
   const [status, setStatus] = useState('all')
+  const [searchQuery, setSearchQuery] = useState();
+
   const filteredMovies = (
-    status === 'all'
+    searchQuery
+    ? movies.filter(m => m.title.toLowerCase().includes(searchQuery.toLowerCase()))
+    : status === 'all'
     ? movies
     : status === 'watched'
     ? movies.filter(m => m.watched === true)
@@ -15,10 +19,12 @@ export default function MovieList({ movies, setMovies }) {
   return (
     <div className="container">
       <div className="navBar">
-        <div className={`sBar ${status === 'all' ? 'highlighted' : ''}`} onClick={() => setStatus('all')}>All</div>
-        <div className={`sBar ${status === 'watched' ? 'highlighted' : ''}`} onClick={() => setStatus('watched')}>Watched</div>
-        <div className={`sBar ${status === 'notWatched' ? 'highlighted' : ''}`} onClick={() => setStatus('notWatched')}>To Watch</div>
-        <SearchBar />
+        <div className="statusHolder">
+          <div className={`sBar ${status === 'all' ? 'highlighted' : ''}`} onClick={() => setStatus('all')}>All</div>
+          <div className={`sBar ${status === 'watched' ? 'highlighted' : ''}`} onClick={() => setStatus('watched')}>Watched</div>
+          <div className={`sBar ${status === 'notWatched' ? 'highlighted' : ''}`} onClick={() => setStatus('notWatched')}>To Watch</div>
+        </div>
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
       </div>
       <div className="movieList">
         {filteredMovies.map(movie => (

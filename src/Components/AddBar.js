@@ -14,6 +14,7 @@ export default function AddBar ({ movies, setMovies}) {
     setMovies([...movies, {
       title: newMovie
     }])
+    setNewMovie('')
   }
 
   return (
