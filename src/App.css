@@ -48,7 +48,8 @@ table {
   --bg: #EEEDE7;
   --highlight: #E7D2CC;
   --lowlight: #B9B7BD;
-  --dark: #868B8E;;
+  --dark: #868B8E;
+  --box:  rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 
@@ -72,7 +73,7 @@ button {
   cursor: pointer;
   padding-left: 10px;
   padding-right: 10px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: var(--bs);
 }
 
 input {
@@ -88,14 +89,8 @@ input {
   width: 960px;
 }
 
-/* AddBar */
-.addBar {
-  margin: 10px;
-}
-
-.addBar input {
-  width: 270px;
-}
+/* AddBar *
+/* ---------------------- */
 
 /* MovieList */
 .navBar {
@@ -103,37 +98,6 @@ input {
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
-}
-
-.movieList {
-  margin: 10px;
-}
-
-.movieEntry {
-  border: 1px solid black;
-  padding: 5px;
-}
-
-
-/* .movieEntry.notWatched {
-  background: var(--highlight);
-} */
-
-/* .movieEntry.watched {
-  background: var(--lowlight);
-} */
-
-.sBar.highlighted {
-  background: var(--highlight);
-}
-
-.sBar {
-  /* background: rgb(206, 125, 125); */
-  padding-left: 10px;
-  padding-right: 10px;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  border-radius: 5px;
 }
 
 /* .searchBar input::after{
@@ -169,3 +133,61 @@ input {
 .statusHolder {
   display: flex;
 }
+
+.statusBar.highlighted {
+  background: var(--highlight);
+}
+
+.statusBar {
+  /* background: rgb(206, 125, 125); */
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  box-shadow: var(--box);
+  border-radius: 5px;
+}
+/* ---------------------- */
+
+/* Movie */
+.movieList {
+  margin: 10px;
+}
+
+.movieEntry {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+
+/* .movieEntry.notWatched {
+  background: var(--highlight);
+} */
+
+/* .movieEntry.watched {
+  background: var(--lowlight);
+} */
+
+/* ---------------------- */
+
+/* AddBar */
+
+.addBar {
+  margin: 10px 10px 30px 10px;
+  outline: 1px solid black;
+  width: 312px;
+  border-radius: 5px;
+}
+
+.addBar button {
+  background: transparent;
+  box-shadow: none;
+}
+
+.addBar input {
+  width: 270px;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+/* ---------------------- */

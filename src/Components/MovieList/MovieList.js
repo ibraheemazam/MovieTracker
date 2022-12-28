@@ -20,9 +20,9 @@ export default function MovieList({ movies, setMovies }) {
     <div className="container">
       <div className="navBar">
         <div className="statusHolder">
-          <div className={`sBar ${status === 'all' ? 'highlighted' : ''}`} onClick={() => setStatus('all')}>All</div>
-          <div className={`sBar ${status === 'watched' ? 'highlighted' : ''}`} onClick={() => setStatus('watched')}>Watched</div>
-          <div className={`sBar ${status === 'notWatched' ? 'highlighted' : ''}`} onClick={() => setStatus('notWatched')}>To Watch</div>
+          <div className={`statusBar ${status === 'all' ? 'highlighted' : ''}`} onClick={() => setStatus('all')}>All</div>
+          <div className={`statusBar ${status === 'watched' ? 'highlighted' : ''}`} onClick={() => setStatus('watched')}>Watched</div>
+          <div className={`statusBar ${status === 'notWatched' ? 'highlighted' : ''}`} onClick={() => setStatus('notWatched')}>To Watch</div>
         </div>
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
       </div>
