@@ -70,11 +70,16 @@ button {
   border: none;
   border-width: thin;
   font-size: 16px;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 input {
   border-radius: 5px;
   border-width: thin;
+  font-size: 16px;
 }
 
 .container {
@@ -86,7 +91,7 @@ input {
 
 .navBar {
   display: flex;
-  align-items: row;
+  flex-direction: row;
   margin: 10px;
 }
 
@@ -101,4 +106,33 @@ input {
 .movieEntry {
   border: 1px solid black;
   padding: 5px;
+}
+
+.addBar input {
+  width: 270px;
+}
+
+.searchBar input {
+  width: 220px;
+}
+
+/* .movieEntry.notWatched {
+  background: var(--highlight);
+} */
+
+/* .movieEntry.watched {
+  background: var(--lowlight);
+} */
+
+.sBar.highlighted {
+  background: var(--highlight);
+}
+
+.sBar {
+  /* background: rgb(206, 125, 125); */
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 5px;
 }
