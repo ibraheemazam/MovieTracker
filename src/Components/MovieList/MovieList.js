@@ -26,11 +26,11 @@ export default function MovieList({ movies, setMovies }) {
         </div>
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
       </div>
-      <div className="movieList">
+      {filteredMovies.length > 0 ? <div className="movieList">
         {filteredMovies.map(movie => (
           <Movie key={movie.title} movie={movie} movies={movies} setMovies={setMovies}/>
         ))}
-      </div>
+      </div> : <div>No movies found...</div>}
     </ div>
   )
 }
